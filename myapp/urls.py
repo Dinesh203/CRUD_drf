@@ -9,13 +9,12 @@ router = DefaultRouter()
 router.register(r'viewses', ApiViewSets)
 
 
-
 urlpatterns = [
     path("", HelloView.as_view(), name='hello'),
     path("viewsets/", include(router.urls)),
     # path("modelviews/", ApiViewSets.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update',
     #                                         'delete': 'destroy'}), name='model_views'),
-    path("userinfo/<int:pk>", UserDetail.as_view())
+    # path("userinfo/<int:pk>", UserDetail.as_view())
 
 ]
 
